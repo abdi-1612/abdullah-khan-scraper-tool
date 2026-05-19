@@ -36,13 +36,13 @@ Built for flipping phones, tablets, MacBooks, and smartwatches locally in Windso
 ---
 
 ## Project Structure
+```
 deal_finder.py          # Main script: scraping, matching, scoring, alerting
 generate_prices_csv.py  # Rebuilds prices.csv from the pricing workbook
 config.example.json     # Config template — copy to config.json and fill in
 prices.csv              # Pricing catalog with fair price, max buy, deductions
 requirements.txt        # Python dependencies
-
----
+```
 
 ---
 
@@ -51,7 +51,7 @@ requirements.txt        # Python dependencies
 ```bash
 # 1. Clone the repo
 git clone https://github.com/abdi-1612/abdullah-khan-scraper-tool.git
-cd deal-finder
+cd abdullah-khan-scraper-tool
 
 # 2. Create and activate a virtual environment
 python3 -m venv .venv
@@ -63,8 +63,6 @@ playwright install chromium
 ```
 
 ---
-
-Yes definitely add both. Here's the updated **Configuration** and **Usage** sections to replace in your README:
 
 ```markdown
 ## Configuration
