@@ -50,7 +50,7 @@ requirements.txt        # Python dependencies
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/yourusername/deal-finder.git
+git clone https://github.com/abdi-1612/abdullah-khan-scraper-tool.git
 cd deal-finder
 
 # 2. Create and activate a virtual environment
