@@ -1,3 +1,8 @@
+# Project-specific
+config.json
+seen_listings.json
+state.json
+fb_profile/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
