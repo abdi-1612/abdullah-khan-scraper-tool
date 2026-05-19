@@ -64,6 +64,9 @@ playwright install chromium
 
 ---
 
+Yes definitely add both. Here's the updated **Configuration** and **Usage** sections to replace in your README:
+
+```markdown
 ## Configuration
 
 Copy the example config and fill in your values:
@@ -72,7 +75,13 @@ Copy the example config and fill in your values:
 cp config.example.json config.json
 ```
 
-Edit `config.json`:
+Then open and edit it:
+
+```bash
+nano config.json
+```
+
+Navigate to the `telegram` section and fill in your details:
 
 ```json
 "telegram": {
@@ -81,10 +90,28 @@ Edit `config.json`:
 }
 ```
 
-To get your Telegram chat ID:
-```bash
-python3 deal_finder.py --get-telegram-chat-id
-```
+Save with `Ctrl+X` → `Y` → `Enter`.
+
+**To get your bot token:** Message @BotFather on Telegram and create a new bot.
+
+**To get your chat ID:**
+1. Paste this in your browser (replace with your token):
+   `https://api.telegram.org/botYOUR_TOKEN/getUpdates`
+2. Send any message to your bot on Telegram
+3. Refresh the URL — your chat ID appears as `"id"` in the response
+
+**Other settings you may want to change in `config.json`:**
+
+| Setting | Default | Description |
+|---|---|---|
+| `poll_minutes` | 45 | How often the tool scans for new listings |
+| `min_price` | 0 | Ignore listings below this price |
+| `max_price` | 5000 | Ignore listings above this price |
+| `blocked_words` | see file | Listings containing these words are skipped |
+| `scroll_rounds` | 6 | How many times Facebook Marketplace is scrolled per scan |
+| `pages_per_search` | 2 | How many Kijiji pages are scraped per search |
+| `headless` | true | Set to `false` if Facebook blocks the scraper |
+
 
 ---
 
@@ -100,16 +127,27 @@ python3 deal_finder.py --test-telegram
 # Run a single dry-run scan (no alerts sent)
 python3 deal_finder.py --once --dry-run
 
-# Run the continuous watcher
+# Run a live single scan
+python3 deal_finder.py --once
+
+# Run the continuous watcher (scans every poll_minutes)
 python3 deal_finder.py --watch
 
 # Clear dedupe history to re-alert old listings
 python3 deal_finder.py --clear-seen
 
-# Mark a listing as already messaged
+# Mark a listing as already messaged so it never alerts again
 python3 deal_finder.py --mark-messaged "LISTING_URL"
 ```
 
+```bash
+nano config.json
+```
+
+```json
+"poll_minutes": 45
+```
+```
 ---
 
 ## Pricing Logic
