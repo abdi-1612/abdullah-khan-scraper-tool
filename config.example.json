@@ -1,0 +1,151 @@
+{
+  "poll_minutes": 45,
+  "alert_existing_on_first_run": false,
+  "min_price": 0,
+  "max_price": 5000,
+  "blocked_words": [
+    "case",
+    "cases",
+    "cover",
+    "folio",
+    "smart folio",
+    "holder",
+    "looking to buy",
+    "we buy",
+    "box only",
+    "screen protector"
+  ],
+  "telegram": {
+      "bot_token": "YOUR_BOT_TOKEN_HERE",
+      "chat_id": "YOUR_CHAT_ID_HERE"
+  },
+  "pricing": {
+    "sell_price_multiplier": 1.4,
+    "max_buy_multiplier": 1.12,
+    "negotiation_above_max_buy_ratio": 1.1
+  },
+  "validation": {
+    "general_min_score": 78,
+    "macbook_direct_min_score": 88,
+    "free_listing_score_relief": 6,
+    "reject_home_terms": true,
+    "reject_accessories": true,
+    "reject_parts_only": true,
+    "reject_locked_devices": true,
+    "allow_non_sheet_macbooks": true,
+    "reject_pre_2020_macbooks": true,
+    "reject_intel_macbooks": true,
+    "manual_deduction_max_steps": 2
+  },
+  "dedupe": {
+    "enabled": true,
+    "history_file": "seen_listings.json"
+  },
+  "kijiji": {
+    "pages_per_search": 2,
+    "fetch_listing_details": true,
+    "detail_fetch_limit": 12,
+    "free_listing_detail_fetch_limit": 12,
+    "timeout_seconds": 25
+  },
+  "facebook": {
+    "profile_dir": "fb_profile",
+    "headless": true,
+    "timeout_seconds": 30,
+    "scroll_rounds": 6,
+    "fetch_listing_details": true,
+    "detail_fetch_limit": 6,
+    "free_listing_detail_fetch_limit": 6
+  },
+  "debug": {
+    "enabled": false,
+    "log_rejections": true,
+    "log_dedupe": true
+  },
+  "searches": [
+    {
+      "name": "Kijiji Windsor iPhone",
+      "platform": "kijiji",
+      "url": "https://www.kijiji.ca/b-windsor-area-on/iphones/k0l1700220?address=Windsor%2C%20Ontario&dc=true&ll=42.314113%2C-83.036751&radius=16.0&view=list",
+      "enabled": true,
+      "pages": 2
+    },
+    {
+      "name": "Kijiji Windsor Apple Watch",
+      "platform": "kijiji",
+      "url": "https://www.kijiji.ca/b-windsor-area-on/apple-watch/k0l1700220?radius=16.0&address=Windsor%2C+Ontario&ll=42.314113%2C-83.036751&rb=true&dc=true",
+      "enabled": true,
+      "pages": 2
+    },
+    {
+      "name": "Kijiji Windsor Samsung Phone",
+      "platform": "kijiji",
+      "url": "https://www.kijiji.ca/b-windsor-area-on/samsung-phone/k0l1700220?address=Windsor%2C%20Ontario&dc=true&ll=42.314113%2C-83.036751&radius=16.0&view=list",
+      "enabled": true,
+      "pages": 2
+    },
+    {
+      "name": "Kijiji Windsor Google Pixel",
+      "platform": "kijiji",
+      "url": "https://www.kijiji.ca/b-windsor-area-on/google-pixel/k0l1700220?address=Windsor%2C%20Ontario&dc=true&ll=42.314113%2C-83.036751&radius=16.0&view=list",
+      "enabled": true,
+      "pages": 2
+    },
+    {
+      "name": "Kijiji Windsor Ipad",
+      "platform": "kijiji",
+      "url": "https://www.kijiji.ca/b-windsor-area-on/ipad/k0l1700220?address=Windsor%2C%20Ontario&dc=true&ll=42.314113%2C-83.036751&radius=16.0&view=list",
+      "enabled": true,
+      "pages": 2
+    },
+    {
+      "name": "Kijiji Windsor MacBook",
+      "platform": "kijiji",
+      "url": "https://www.kijiji.ca/b-windsor-area-on/macbook/k0l1700220?address=Windsor%2C%20Ontario&dc=true&ll=42.314113%2C-83.036751&radius=16.0&view=list",
+      "enabled": true,
+      "pages": 2
+    },
+    {
+      "name": "Facebook Windsor iPhone",
+      "platform": "facebook",
+      "url": "https://www.facebook.com/marketplace/windsor/search?query=iphone",
+      "enabled": true,
+      "scroll_rounds": 6
+    },
+    {
+      "name": "Facebook Windsor Apple watch",
+      "platform": "facebook",
+      "url": "https://www.facebook.com/marketplace/windsor/search?query=apple%20watch%20",
+      "enabled": true,
+      "scroll_rounds": 6
+    },
+    {
+      "name": "Facebook Windsor Samsung Phone",
+      "platform": "facebook",
+      "url": "https://www.facebook.com/marketplace/windsor/search?query=samsung%20phone",
+      "enabled": true,
+      "scroll_rounds": 6
+    },
+    {
+      "name": "Facebook Windsor Google Pixel",
+      "platform": "facebook",
+      "url": "https://www.facebook.com/marketplace/windsor/search?query=google%20pixel",
+      "enabled": true,
+      "scroll_rounds": 6
+    },
+    {
+      "name": "Facebook Windsor Ipad",
+      "platform": "facebook",
+      "url": "https://www.facebook.com/marketplace/windsor/search?query=ipad",
+      "enabled": true,
+      "scroll_rounds": 6
+    },
+    {
+      "name": "Facebook Windsor MacBook",
+      "platform": "facebook",
+      "url": "https://www.facebook.com/marketplace/windsor/search?query=macbook",
+      "enabled": true,
+      "scroll_rounds": 6
+    }
+  ]
+}
